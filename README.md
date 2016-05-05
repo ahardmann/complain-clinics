@@ -1,9 +1,5 @@
 # Reclame Clinicas
 
-> Projeto para avaliar e denunciar atrasos de atendimentos em geral.
-
----
-
 O projeto consiste em disponibilizar um ambiente web para que possamos realizar reclamações pela falta de profissionalismo, eventuais atrasos ocorridos com bastante frequência, falta de higiêne e etc nas clinicas em geral.
 
 
