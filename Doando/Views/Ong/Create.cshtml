@@ -1,0 +1,69 @@
+﻿@model Doando.ViewModel.OngViewModel
+
+@{
+    ViewBag.Title = "Adicionar nova ONG";
+}
+
+<h2>Adicionar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ong</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.NOME)
+                @Html.EditorFor(model => model.NOME, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NOME, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.CNPJ)
+                @Html.EditorFor(model => model.CNPJ, new { htmlAttributes = new { maxlength = 14, @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CNPJ, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="form-group">            
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.SITE)
+                @Html.EditorFor(model => model.SITE, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SITE, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.EMAIL)
+                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.Endereco)
+                @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group pull-left">
+            <div class="col-md-12">
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
+                <div class="btn btn-default">
+                    @Html.ActionLink("Cancelar", "Index")
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

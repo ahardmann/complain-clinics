@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:500' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Doando.Org", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="menu" class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="page-scroll">@Html.ActionLink("ONGs", "Index", "Ong")</li>
+                    <li class="page-scroll">@Html.ActionLink("Necessidades", "Index", "Necessidade")</li>
+                    @Html.Partial("_LoginPartial")
+                </ul>
+               
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content doando-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <!-- Footer -->
+    @Html.Partial("_FooterPartial")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    
+    <script>
+        $(document).ready(function () {
+            $('#ID_ONG').addClass('form-control');
+            $("#DATA").mask("99/99/9999");
+            $("#Endereco_TELEFONE_PRIMARIO").mask("(99) 9999-9999");
+            $("#Endereco_TELEFONE_SECUNDARIO").mask("(99) 9999-9999");
+            $("#CNPJ").mask("99.999.999/9999-99");
+            $("#Endereco_CEP").mask("99999-999");
+        });
+    </script>
+</body>
+</html>
