@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Doando
+namespace Clinic
 {
     public class BundleConfig
     {
@@ -26,7 +26,7 @@ namespace Doando
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/doando.theme.css",
+                      "~/Content/Clinic.theme.css",
                       "~/Content/main.css"));
         }
     }

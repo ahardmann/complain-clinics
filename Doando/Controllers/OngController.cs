@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Doando.Models;
-using Doando.ViewModel;
+using Clinic.Models;
+using Clinic.ViewModel;
 using Microsoft.AspNet.Identity;
 
-namespace Doando.Controllers
+namespace Clinic.Controllers
 {
     public class OngController : Controller
     {

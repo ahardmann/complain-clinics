@@ -1,4 +1,4 @@
-namespace Doando.Migrations
+namespace Clinic.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

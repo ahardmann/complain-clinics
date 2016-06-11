@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Doando.Models
+namespace Clinic.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Doando.Models;
+using Clinic.Models;
 
-namespace Doando.Controllers
+namespace Clinic.Controllers
 {
     [Authorize]
     public class AccountController : Controller

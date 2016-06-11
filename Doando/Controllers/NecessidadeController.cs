@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Doando.Models;
+using Clinic.Models;
 using Microsoft.AspNet.Identity;
 
-namespace Doando.Controllers
+namespace Clinic.Controllers
 {
     public class NecessidadeController : Controller
     {

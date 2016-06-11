@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Doando.Models;
+using Clinic.Models;
 
-namespace Doando
+namespace Clinic
 {
     public partial class Startup
     {

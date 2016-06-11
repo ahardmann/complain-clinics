@@ -1,4 +1,4 @@
-namespace Doando.Models
+namespace Clinic.Models
 {
     using System;
     using System.Data.Entity;

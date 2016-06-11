@@ -1,18 +1,18 @@
-namespace Doando.Migrations
+namespace Clinic.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Doando.Models.ModeloDados>
+    internal sealed class Configuration : DbMigrationsConfiguration<Clinic.Models.ModeloDados>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Doando.Models.ModeloDados context)
+        protected override void Seed(Clinic.Models.ModeloDados context)
         {
             //  This method will be called after migrating to the latest version.
 

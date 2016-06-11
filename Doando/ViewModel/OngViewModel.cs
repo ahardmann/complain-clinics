@@ -1,10 +1,10 @@
-﻿using Doando.Models;
+﻿using Clinic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Doando.ViewModel
+namespace Clinic.ViewModel
 {
     public class OngViewModel
     {
