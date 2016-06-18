@@ -17,13 +17,13 @@ namespace Clinic.Controllers
     {
         private ModeloDados db = new ModeloDados();
 
-        // GET: Ocorrencia
+        // GET: Ocorrencias
         public async Task<ActionResult> Index()
         {
             return View(await db.Ocorrencia.ToListAsync());
         }
 
-        // GET: Ocorrencia/Details/5
+        // GET: Ocorrencias/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,14 +38,14 @@ namespace Clinic.Controllers
             return View(ocorrencia);
         }
 
-        // GET: Ocorrencia/Create
+        // GET: Ocorrencias/Create
         [Authorize]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Ocorrencia/Create
+        // POST: Ocorrencias/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
 
@@ -84,7 +84,7 @@ namespace Clinic.Controllers
             return View(ocorrenciaVM);
         }
 
-        // GET: Ocorrencia/Edit/5
+        // GET: Ocorrencias/Edit/5
         [Authorize]
         public ActionResult Edit(int? id)
         {
@@ -104,7 +104,7 @@ namespace Clinic.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Ocorrencia/Edit/5
+        // POST: Ocorrencias/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
@@ -134,7 +134,7 @@ namespace Clinic.Controllers
             return View(ocorrenciaVM);
         }
 
-        // GET: Ocorrencia/Delete/5
+        // GET: Ocorrencias/Delete/5
         [Authorize]
         public ActionResult Delete(int? id)
         {
@@ -154,7 +154,7 @@ namespace Clinic.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Ocorrencia/Delete/5
+        // POST: Ocorrencias/Delete/5
         [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

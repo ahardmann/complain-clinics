@@ -22,7 +22,6 @@ namespace Clinic.Models
 
         public virtual DbSet<Ocorrencias> Ocorrencia { get; set; }
         public virtual DbSet<Endereco> Endereco { get; set; }
-        //public virtual DbSet<Necessidade> Necessidade { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

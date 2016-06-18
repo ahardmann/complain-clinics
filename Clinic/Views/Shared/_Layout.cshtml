@@ -32,8 +32,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul id="menu" class="nav navbar-nav navbar-right">
                     <li class="page-scroll">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li class="page-scroll">@Html.ActionLink("ONGs", "Index", "Ong")</li>
-                    <li class="page-scroll">@Html.ActionLink("Necessidades", "Index", "Necessidade")</li>
+                    <li class="page-scroll">@Html.ActionLink("Ocorrências", "Index", "Ocorrencias")</li>
                     @Html.Partial("_LoginPartial")
                 </ul>
                
@@ -55,7 +54,7 @@
     
     <script>
         $(document).ready(function () {
-            $('#ID_ONG').addClass('form-control');
+            $('#ID_OCORRENCIA').addClass('form-control');
             $("#DATA").mask("99/99/9999");
             $("#Endereco_TELEFONE_PRIMARIO").mask("(99) 9999-9999");
             $("#Endereco_TELEFONE_SECUNDARIO").mask("(99) 9999-9999");
