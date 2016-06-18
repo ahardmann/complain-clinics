@@ -20,9 +20,9 @@ namespace Clinic.Models
             return new ModeloDados();
         }
 
-        public virtual DbSet<Ong> Ong { get; set; }
+        public virtual DbSet<Ocorrencias> Ocorrencia { get; set; }
         public virtual DbSet<Endereco> Endereco { get; set; }
-        public virtual DbSet<Necessidade> Necessidade { get; set; }
+        //public virtual DbSet<Necessidade> Necessidade { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -56,57 +56,37 @@ namespace Clinic.Models
                 .Property(e => e.CEP)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ong>()
-                .Property(e => e.CNPJ)
+            modelBuilder.Entity<Ocorrencias>()
+                .Property(e => e.NOME_CLINICA)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ong>()
-                .Property(e => e.NOME)
+            modelBuilder.Entity<Ocorrencias>()
+                .Property(e => e.NOME_MEDICO)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ong>()
-                .Property(e => e.SITE)
+            modelBuilder.Entity<Ocorrencias>()
+                .Property(e => e.SITE_CLINICA)
                 .IsUnicode(false);
-            
-            modelBuilder.Entity<Ong>()
-            .Property(e => e.EMAIL);
 
+            modelBuilder.Entity<Ocorrencias>()
+                .Property(e => e.ATRASO_MEDIO)
+                .IsUnicode(false);
 
-            modelBuilder.Entity<Ong>()
+            modelBuilder.Entity<Ocorrencias>()
+            .Property(e => e.NUMERO_OCORRENCIAS);
+
+            modelBuilder.Entity<Ocorrencias>()
+            .Property(e => e.DATA);
+
+            modelBuilder.Entity<Ocorrencias>()
                 .HasRequired(e => e.Endereco)
                 .WithMany()
                 .HasForeignKey(e => e.ID_END);
 
-            modelBuilder.Entity<Ong>()
+            modelBuilder.Entity<Ocorrencias>()
                 .HasRequired(e => e.Usuario)
                 .WithMany()
                 .HasForeignKey(e => e.ID_USER);
-
-            modelBuilder.Entity<Ong>()
-                .HasMany(e => e.Necessidades)
-                .WithRequired(e => e.Ong);
-
-
-            modelBuilder.Entity<Necessidade>()
-               .Property(e => e.DESCRICAO)
-               .IsUnicode(false);
-
-            modelBuilder.Entity<Necessidade>()
-                .Property(e => e.TITULO)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Necessidade>()
-                .Property(e => e.PRIORIDADE)
-                .IsUnicode(false);
-
-            //modelBuilder.Entity<Necessidade>()
-            //    .Property(e => e.CNPJ)
-            //    .IsUnicode(false);
-
-            modelBuilder.Entity<Necessidade>()
-                .HasRequired(e => e.Ong)
-                .WithMany()
-                .HasForeignKey(e => e.ID_ONG);
         }
 
     }

@@ -163,8 +163,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NecessidadeController.cs" />
-    <Compile Include="Controllers\OngController.cs" />
+    <Compile Include="Controllers\OcorrenciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,8 +177,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModeloDados.cs" />
-    <Compile Include="Models\Necessidade.cs" />
-    <Compile Include="Models\Ong.cs" />
+    <Compile Include="Models\Ocorrencias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -188,7 +186,7 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\EnderecoViewModel.cs" />
-    <Compile Include="ViewModel\OngViewModel.cs" />
+    <Compile Include="ViewModel\OcorrenciasViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -257,11 +255,6 @@
     <Content Include="Views\Ong\Details.cshtml" />
     <Content Include="Views\Ong\Edit.cshtml" />
     <Content Include="Views\Ong\Index.cshtml" />
-    <Content Include="Views\Necessidade\Create.cshtml" />
-    <Content Include="Views\Necessidade\Delete.cshtml" />
-    <Content Include="Views\Necessidade\Details.cshtml" />
-    <Content Include="Views\Necessidade\Edit.cshtml" />
-    <Content Include="Views\Necessidade\Index.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>

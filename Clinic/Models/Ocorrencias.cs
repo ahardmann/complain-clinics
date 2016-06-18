@@ -6,27 +6,33 @@ namespace Clinic.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Ong")]
-    public partial class Ong
+    [Table("Ocorrencias")]
+    public partial class Ocorrencias
     {
         [Key]
-        public int ID_ONG { get; set; }
+        public int ID_OCORRENCIA { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string CNPJ { get; set; }
+        public string NOME_CLINICA { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string NOME { get; set; }
+        public string NOME_MEDICO { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string SITE { get; set; }
+        public string SITE_CLINICA { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string EMAIL { get; set; }
+        public string ATRASO_MEDIO { get; set; }
+
+        [Required]
+        public int NUMERO_OCORRENCIAS { get; set; }
+
+        [Required]
+        public DateTime DATA { get; set; }
 
         public int ID_END { get; set; }
 
@@ -35,7 +41,5 @@ namespace Clinic.Models
         public string ID_USER { get; set; }
 
         public virtual ApplicationUser Usuario { get; set; }
-
-        public virtual ICollection<Necessidade> Necessidades { get; set; }
     }
 }
