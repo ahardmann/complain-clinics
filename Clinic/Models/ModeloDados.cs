@@ -20,7 +20,7 @@ namespace Clinic.Models
             return new ModeloDados();
         }
 
-        public virtual DbSet<Ocorrencias> Ocorrencia { get; set; }
+        public virtual DbSet<Ocorrencia> Ocorrencia { get; set; }
         public virtual DbSet<Endereco> Endereco { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -55,34 +55,34 @@ namespace Clinic.Models
                 .Property(e => e.CEP)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .Property(e => e.NOME_CLINICA)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .Property(e => e.NOME_MEDICO)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .Property(e => e.SITE_CLINICA)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .Property(e => e.ATRASO_MEDIO)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
             .Property(e => e.NUMERO_OCORRENCIAS);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
             .Property(e => e.DATA);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .HasRequired(e => e.Endereco)
                 .WithMany()
                 .HasForeignKey(e => e.ID_END);
 
-            modelBuilder.Entity<Ocorrencias>()
+            modelBuilder.Entity<Ocorrencia>()
                 .HasRequired(e => e.Usuario)
                 .WithMany()
                 .HasForeignKey(e => e.ID_USER);

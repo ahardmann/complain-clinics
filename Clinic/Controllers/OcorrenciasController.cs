@@ -17,20 +17,20 @@ namespace Clinic.Controllers
     {
         private ModeloDados db = new ModeloDados();
 
-        // GET: Ocorrencias
+        // GET: Ocorrencia
         public async Task<ActionResult> Index()
         {
             return View(await db.Ocorrencia.ToListAsync());
         }
 
-        // GET: Ocorrencias/Details/5
+        // GET: Ocorrencia/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ocorrencias ocorrencia = db.Ocorrencia.Find(id);
+            Ocorrencia ocorrencia = db.Ocorrencia.Find(id);
             if (ocorrencia == null)
             {
                 return HttpNotFound();
@@ -38,14 +38,14 @@ namespace Clinic.Controllers
             return View(ocorrencia);
         }
 
-        // GET: Ocorrencias/Create
+        // GET: Ocorrencia/Create
         [Authorize]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Ocorrencias/Create
+        // POST: Ocorrencia/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
 
@@ -56,7 +56,7 @@ namespace Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                Ocorrencias ocorrencia = new Ocorrencias()
+                Ocorrencia ocorrencia = new Ocorrencia()
                 {
                     Endereco = new Endereco()
                     {
@@ -84,7 +84,7 @@ namespace Clinic.Controllers
             return View(ocorrenciaVM);
         }
 
-        // GET: Ocorrencias/Edit/5
+        // GET: Ocorrencia/Edit/5
         [Authorize]
         public ActionResult Edit(int? id)
         {
@@ -92,7 +92,7 @@ namespace Clinic.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ocorrencias ocorrencia = db.Ocorrencia.Find(id);
+            Ocorrencia ocorrencia = db.Ocorrencia.Find(id);
             if (ocorrencia == null)
             {
                 return HttpNotFound();
@@ -104,17 +104,17 @@ namespace Clinic.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Ocorrencias/Edit/5
+        // POST: Ocorrencia/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID_OCORRENCIA,NOME_CLINICA,NOME_MEDICO,SITE_CLINICA,ATRASO_MEDIO,NUMERO_OCORRENCIAS,DATA,ENDERECO,ID_USER")] Ocorrencias ocorrenciaVM)
+        public async Task<ActionResult> Edit([Bind(Include = "ID_OCORRENCIA,NOME_CLINICA,NOME_MEDICO,SITE_CLINICA,ATRASO_MEDIO,NUMERO_OCORRENCIAS,DATA,ENDERECO,ID_USER")] Ocorrencia ocorrenciaVM)
         {
             if (ModelState.IsValid)
             {
-                Ocorrencias ocorrencia = db.Ocorrencia.Find(ocorrenciaVM.ID_OCORRENCIA);
+                Ocorrencia ocorrencia = db.Ocorrencia.Find(ocorrenciaVM.ID_OCORRENCIA);
                 if (User.Identity.GetUserId().Equals(ocorrencia.ID_USER))
                 {
                     ocorrencia.NOME_CLINICA = ocorrenciaVM.NOME_CLINICA;
@@ -134,7 +134,7 @@ namespace Clinic.Controllers
             return View(ocorrenciaVM);
         }
 
-        // GET: Ocorrencias/Delete/5
+        // GET: Ocorrencia/Delete/5
         [Authorize]
         public ActionResult Delete(int? id)
         {
@@ -142,7 +142,7 @@ namespace Clinic.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ocorrencias ocorrencia = db.Ocorrencia.Find(id);
+            Ocorrencia ocorrencia = db.Ocorrencia.Find(id);
             if (ocorrencia == null)
             {
                 return HttpNotFound();
@@ -154,13 +154,13 @@ namespace Clinic.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Ocorrencias/Delete/5
+        // POST: Ocorrencia/Delete/5
         [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Ocorrencias ocorrencia = db.Ocorrencia.Find(id);
+            Ocorrencia ocorrencia = db.Ocorrencia.Find(id);
             if (ocorrencia != null && User.Identity.GetUserId().Equals(ocorrencia.ID_USER))
             {
                 db.Ocorrencia.Remove(ocorrencia);
