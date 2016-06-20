@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,12 +116,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -163,8 +165,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NecessidadeController.cs" />
-    <Compile Include="Controllers\OngController.cs" />
+    <Compile Include="Controllers\OcorrenciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,8 +179,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModeloDados.cs" />
-    <Compile Include="Models\Necessidade.cs" />
-    <Compile Include="Models\Ong.cs" />
+    <Compile Include="Models\Ocorrencias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -188,7 +188,7 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\EnderecoViewModel.cs" />
-    <Compile Include="ViewModel\OngViewModel.cs" />
+    <Compile Include="ViewModel\OcorrenciasViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -217,7 +217,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -252,16 +254,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Ong\Create.cshtml" />
-    <Content Include="Views\Ong\Delete.cshtml" />
-    <Content Include="Views\Ong\Details.cshtml" />
-    <Content Include="Views\Ong\Edit.cshtml" />
-    <Content Include="Views\Ong\Index.cshtml" />
-    <Content Include="Views\Necessidade\Create.cshtml" />
-    <Content Include="Views\Necessidade\Delete.cshtml" />
-    <Content Include="Views\Necessidade\Details.cshtml" />
-    <Content Include="Views\Necessidade\Edit.cshtml" />
-    <Content Include="Views\Necessidade\Index.cshtml" />
+    <Content Include="Views\Ocorrencia\Create.cshtml" />
+    <Content Include="Views\Ocorrencia\Delete.cshtml" />
+    <Content Include="Views\Ocorrencia\Details.cshtml" />
+    <Content Include="Views\Ocorrencia\Edit.cshtml" />
+    <Content Include="Views\Ocorrencia\Index.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,29 +1,29 @@
-namespace Clinic.Migrations
-{
-    using System;
-    using System.Data.Entity.Migrations;
-
-    public partial class initial : DbMigration
-    {
-        public override void Up()
-        {
-            CreateTable(
-                "dbo.Endereco",
-                c => new
-                {
-                    ID_END = c.Int(nullable: false, identity: true),
-                    RUA = c.String(nullable: false, maxLength: 100, unicode: false),
-                    CIDADE = c.String(nullable: false, maxLength: 100, unicode: false),
-                    TELEFONE_PRIMARIO = c.String(nullable: false, maxLength: 100, unicode: false),
-                    TELEFONE_SECUNDARIO = c.String(nullable: false, maxLength: 100, unicode: false),
-                    ESTADO = c.String(nullable: false, maxLength: 100, unicode: false),
-                    BAIRRO = c.String(nullable: false, maxLength: 100, unicode: false),
-                    CEP = c.String(nullable: false, maxLength: 100, unicode: false),
-                })
-                .PrimaryKey(t => t.ID_END);
-
-
-            CreateTable(
+﻿namespace Clinic.Migrations
+ {
+     using System;
+     using System.Data.Entity.Migrations;
+ 
+     public partial class initial : DbMigration
+     {
+         public override void Up()
+         {
+             CreateTable(
+                 "dbo.Endereco",
+                 c => new
+                 {
+                     ID_END = c.Int(nullable: false, identity: true),
+                     RUA = c.String(nullable: false, maxLength: 100, unicode: false),
+                     CIDADE = c.String(nullable: false, maxLength: 100, unicode: false),
+                     TELEFONE_PRIMARIO = c.String(nullable: false, maxLength: 100, unicode: false),
+                     TELEFONE_SECUNDARIO = c.String(nullable: false, maxLength: 100, unicode: false),
+                     ESTADO = c.String(nullable: false, maxLength: 100, unicode: false),
+                     BAIRRO = c.String(nullable: false, maxLength: 100, unicode: false),
+                     CEP = c.String(nullable: false, maxLength: 100, unicode: false),
+                 })
+                 .PrimaryKey(t => t.ID_END);
+ 
+ 
+             CreateTable(
                 "dbo.Ocorrencia",
                 c => new
                 {
@@ -131,7 +131,7 @@ namespace Clinic.Migrations
             DropIndex("dbo.Ocorrencia", new[] { "ID_END" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");
-            DropTable("dbo.AspNetUserLogins");
+           DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.Ocorrencia");
