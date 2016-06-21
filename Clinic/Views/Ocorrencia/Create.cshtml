@@ -51,7 +51,7 @@
 
             <div class="col-md-5">
                 @Html.LabelFor(model => model.DATA)
-                @Html.EditorFor(model => model.DATA)
+                @Html.EditorFor(model => model.DATA, new { htmlAttributes = new { @class = "datepicker" } })
             </div>
         </div>
 

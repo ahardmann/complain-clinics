@@ -161,7 +161,7 @@ namespace Clinic.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Ocorrencia ocorrencia = db.Ocorrencia.Find(id);
-            if (ocorrencia != null && User.Identity.GetUserId().Equals(ocorrencia.ID_USER))
+            if (ocorrencia != null)
             {
                 db.Ocorrencia.Remove(ocorrencia);
                 db.SaveChangesAsync();
