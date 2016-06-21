@@ -14,7 +14,13 @@
     <!-- Custom Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>       
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
 </head>
 <body>
@@ -27,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Clinic.Org", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reclame Clinicas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul id="menu" class="nav navbar-nav navbar-right">
@@ -60,6 +66,13 @@
             $("#Endereco_TELEFONE_SECUNDARIO").mask("(99) 9999-9999");
             $("#CNPJ").mask("99.999.999/9999-99");
             $("#Endereco_CEP").mask("99999-999");
+
+            $('[for="Endereco_RUA"]').text('Rua');
+            $('[for="Endereco_CIDADE"]').text('Cidade');
+            $('[for="Endereco_TELEFONE_PRIMARIO"]').text('Telefone');
+            $('[for="Endereco_ESTADO"]').text('Estado');
+            $('[for="Endereco_BAIRRO"]').text('Bairro');
+
         });
     </script>
 </body>

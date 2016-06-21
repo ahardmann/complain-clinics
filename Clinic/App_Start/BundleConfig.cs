@@ -26,7 +26,7 @@ namespace Clinic
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/Clinic.theme.css",
+                      "~/Content/theme.css",
                       "~/Content/main.css"));
         }
     }

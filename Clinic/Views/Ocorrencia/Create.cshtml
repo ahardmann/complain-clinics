@@ -4,60 +4,53 @@
     ViewBag.Title = "Adicionar nova Ocorrencia";
 }
 
-<h2>Adicionar</h2>
+<h2>Adicionar uma Nova Ocorrencia</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Ong</h4>
-        <hr />
+        <h4>Ocorrencia</h4>
+        <hr>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.NOME_CLINICA)
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label>Nome da Clinica</label>
                 @Html.EditorFor(model => model.NOME_CLINICA, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NOME_CLINICA, "", new { @class = "text-danger" })
             </div>
-
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.NOME_MEDICO)
-                @Html.EditorFor(model => model.NOME_MEDICO, new { htmlAttributes = new { maxlength = 14, @class = "form-control" } })
+            <div class="col-md-4">
+                <label>Nome do Médico</label>
+                @Html.EditorFor(model => model.NOME_MEDICO, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NOME_MEDICO, "", new { @class = "text-danger" })
             </div>
-
-        </div>
-
-        <div class="form-group">            
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.SITE_CLINICA)
+            <div class="col-md-4">
+                <label>Site da Clinica</label>
                 @Html.EditorFor(model => model.SITE_CLINICA, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SITE_CLINICA, "", new { @class = "text-danger" })
             </div>
+        </div>
 
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.ATRASO_MEDIO)
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label>Atraso Médio</label>
                 @Html.EditorFor(model => model.ATRASO_MEDIO, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ATRASO_MEDIO, "", new { @class = "text-danger" })
             </div>
-
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.NUMERO_OCORRENCIAS)
-                @Html.EditorFor(model => model.ATRASO_MEDIO)
+            <div class="col-md-4">
+                <label>Número de Ocorrências</label>
+                @Html.EditorFor(model => model.NUMERO_OCORRENCIAS, new { htmlAttributes = new { maxlength = 10, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NUMERO_OCORRENCIAS, "", new { @class = "text-danger" })
             </div>
-
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.DATA)
-                @Html.EditorFor(model => model.DATA, new { htmlAttributes = new { @class = "datepicker" } })
+            <div class="col-md-4">
+                <label>Data</label>
+                @Html.EditorFor(model => model.DATA, new { htmlAttributes = new { @class = "datepicker form-control" } })
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-md-5">
-                @Html.LabelFor(model => model.Endereco)
+            <div class="col-md-4">
                 @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { maxlength = 100, @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
             </div>
