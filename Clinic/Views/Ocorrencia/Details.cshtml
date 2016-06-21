@@ -6,29 +6,29 @@
 
 <h2>Detalhes</h2>
 
-<div>
-    <h4>Clinicas</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>@Html.DisplayNameFor(model => model.NOME_CLINICA)</dt>
-        <dd>@Html.DisplayFor(model => model.NOME_CLINICA)</dd>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NOME_CLINICA)</th>
+            <th>@Html.DisplayNameFor(model => model.NOME_MEDICO)</th>
+            <th>@Html.DisplayNameFor(model => model.SITE_CLINICA)</th>
+            <th>@Html.DisplayNameFor(model => model.ATRASO_MEDIO)</th>
+            <th>@Html.DisplayNameFor(model => model.NUMERO_OCORRENCIAS)</th>
+            <th>@Html.DisplayNameFor(model => model.Endereco)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(model => model.NOME_CLINICA)</td>
+            <td>@Html.DisplayFor(model => model.NOME_MEDICO)</td>
+            <td>@Html.DisplayFor(model => model.SITE_CLINICA)</td>
+            <td>@Html.DisplayFor(model => model.ATRASO_MEDIO)</td>
+            <td>@Html.DisplayFor(model => model.NUMERO_OCORRENCIAS)</td>
+            <td>@Html.DisplayFor(model => model.Endereco)</td>
+        </tr>
+    </tbody>
+</table>
 
-        <dt>@Html.DisplayNameFor(model => model.NOME_MEDICO)</dt>
-        <dd>@Html.DisplayFor(model => model.NOME_MEDICO)</dd>
-
-        <dt>@Html.DisplayNameFor(model => model.SITE_CLINICA)</dt>
-        <dd>@Html.DisplayFor(model => model.SITE_CLINICA)</dd>
-
-        <dt>@Html.DisplayNameFor(model => model.ATRASO_MEDIO)</dt>
-        <dd> @Html.DisplayFor(model => model.ATRASO_MEDIO)</dd>
-
-        <dt>@Html.DisplayNameFor(model => model.NUMERO_OCORRENCIAS)</dt>
-        <dd>@Html.DisplayFor(model => model.NUMERO_OCORRENCIAS)</dd>
-
-        <dt>@Html.DisplayNameFor(model => model.Endereco)</dt>
-        <dd>@Html.DisplayFor(model => model.Endereco)</dd>
-    </dl>
-</div>
 <p>
     <div class="form-group">
         <div class="col-md-offset-1 col-md-10">
