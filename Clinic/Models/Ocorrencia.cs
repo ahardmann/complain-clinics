@@ -37,7 +37,7 @@ namespace Clinic.Models
         public int NUMERO_OCORRENCIAS { get; set; }
 
         [Required]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         [Display(Name = "Data")]
         public DateTime DATA { get; set; }
