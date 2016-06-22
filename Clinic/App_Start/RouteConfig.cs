@@ -19,5 +19,6 @@ namespace Clinic
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
+
     }
 }
